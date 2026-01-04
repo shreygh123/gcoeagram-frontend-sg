@@ -27,7 +27,7 @@ function App() {
 	const axiosInstance = axios.create({
 		baseURL:
 			process.env.NODE_ENV === "production"
-				? "https://tegniescorporation.tech/"
+				? "https://gcoeagram-backend-sg.onrender.com/"
 				: "http://localhost:4000/",
 	});
 	const { user, dispatch } = useContext(Context);
