@@ -1,0 +1,132 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 0.25s ease-in-out;
+}
+:root {
+	--back-color: #e0e0e0;
+	--shadow-3d: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+		0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+		0 41.8px 33.4px rgba(231, 86, 86, 0.086),
+		0 100px 80px rgba(0, 0, 0, 0.12);
+	--bgcolor: #f0f0f0;
+	--tcolor: #121212;
+	--back-shadow: rgba(0, 0, 0, 0.2);
+	--back-shadow-dark: rgba(0, 0, 0, 0.5);
+	--back-shadow-light: rgba(0, 0, 0, 0.1);
+	--transition-time: 200ms;
+	--blue: #4285f4;
+	--red: #ea4335;
+	--yellow: #fbbc05;
+	--green: #34a853;
+}
+#root {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: var(--back-color);
+	background-color: #f0f0f0;
+	background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+}
+main {
+	width: 80%;
+}
+@media (max-width: 1200px) {
+	main {
+		width: 100%;
+	}
+}
+button {
+	border: 0;
+	outline: 0;
+	background: none;
+	cursor: pointer;
+	user-select: none;
+}
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+}
+
+.more-context {
+	position: relative;
+}
+.more-context input {
+	display: none;
+}
+.more-popup {
+	position: absolute;
+	z-index: 10;
+	right: 125%;
+	top: 0;
+	width: 10rem;
+	box-shadow: 0 7px 15px 7px rgba(64, 64, 64, 0.35);
+	border-radius: 5px;
+	padding: 0.35rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 0;
+	opacity: 0;
+	transition: all 0.25s ease-in-out;
+	background-color: var(--bgcolor);
+	color: var(--tcolor);
+	overflow: hidden;
+}
+.more-context input:checked + .more-popup {
+	width: 11.5rem;
+	opacity: 1;
+}
+.more-list {
+	list-style: none;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.more-item {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0.35rem 0.75rem;
+	margin: 0.15rem 0;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.more-item span {
+	white-space: nowrap;
+}
+.more-item a {
+	width: 100%;
+	display: flex;
+}
+.more-item:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.more-item .material-icons {
+	font-size: 1.2rem;
+	padding: 0 0.5rem 0 0;
+}
+.more-item-label {
+	font-size: 0.875rem;
+}
+.context-menu-cover {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	background: transparent;
+}
+.dispn {
+	display: none !important;
+}
+@import url(./responsive.css);

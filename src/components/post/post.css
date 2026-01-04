@@ -1,0 +1,290 @@
+.Post {
+  margin-top: 50px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  padding: 20px 20px;
+  margin-bottom: 25px;
+}
+.Post .postUser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Post .postUser-details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Post .postProfilePhoto > img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.Post .postUserName {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.Post .postInfo {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.Post .postMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Post .postMedia > img {
+  height: 300px;
+  max-width: 100%;
+  object-fit: cover;
+}
+.Post .postLike {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Post .post-addons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Post .post-addons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.2rem;
+  padding: 0.7rem 0.65rem;
+  transition: all 0.1s ease-in-out;
+  border-radius: 500px;
+  color: rgba(0, 0, 0, 0.75);
+}
+.Post .post-addons button:hover {
+  background-color: var(--back-shadow-light);
+}
+.Post .post-addons button > span {
+  margin: 0 0.25rem;
+}
+.Post .post-comment-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.Post .post-comment-popup-box {
+  background-color: var(--bgcolor);
+  width: 50%;
+  height: 75%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+@media (max-width: 850px) {
+  .Post .post-comment-popup-box {
+    width: 80%;
+  }
+}
+.Post .post-comment-popup-head {
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 2.75rem;
+  width: 100%;
+}
+.Post .post-comment-popup-head-close {
+  border: 0;
+  outline: 0;
+  border-radius: 500px;
+  padding: 0.35rem;
+  margin: 0.5rem;
+  background: transparent;
+  transition: all var(--transition-time) ease-in-out;
+}
+.Post .post-comment-popup-head-close:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.Post .post-comment-popup-body {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column;
+  padding: 0.75rem 0.25rem;
+  height: calc(100% - 2.75rem);
+  overflow-y: auto;
+}
+.Post .post-comment-popup-body > * {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0.25rem;
+}
+.Post .post-comment-popup-body-content {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 1.5rem;
+  flex-flow: column;
+}
+.Post .post-comment-popup-body-form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+.Post .post-comment-popup-body-form-image {
+  width: 3.75rem;
+  height: 3.75rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Post .post-comment-popup-body-form-image img {
+  object-fit: cover;
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 500px;
+}
+.Post .post-comment-popup-body-form-form {
+  width: calc(100% - 5rem);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column;
+}
+.Post .post-comment-popup-body-form-form form {
+  width: 100%;
+}
+.Post .post-comment-popup-body-form-form form .buttons {
+  margin: 0.5rem 0;
+}
+.Post .post-comment-popup textarea {
+  width: 75%;
+  border: 0;
+  outline: 2px solid transparent;
+  margin: 0 0.5rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 5px;
+  resize: none;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.Post .post-comment-popup textarea::placeholder {
+  font-size: 0.875rem;
+}
+.Post .post-comment-popup textarea:active, .Post .post-comment-popup textarea:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.04);
+}
+.Post .post-comment-popup form .btn {
+  border: 0;
+  outline: 0;
+  border: 1px solid #0f6fff;
+  margin: 0 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  resize: none;
+  transition: all var(--transition-time) ease-in-out;
+  background-color: #0f6fff;
+  color: #f0f0f0;
+}
+.Post .post-comment-popup form .btn:hover {
+  background-color: #0a6cff;
+}
+.Post .post-comment-popup form .btn-outline {
+  background-color: #f0f0f0;
+  color: #0f6fff;
+}
+.Post .post-comment-popup form .btn-outline:hover {
+  background-color: #0a6cff;
+  color: #f0f0f0;
+}
+.Post .post-comment-popup-comment {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0.5rem 0;
+}
+.Post .post-comment-popup-comment-photo {
+  width: 3.65rem;
+  height: 3.65rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Post .post-comment-popup-comment-photo img {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 500px;
+}
+.Post .post-comment-popup-comment-content {
+  width: calc(100% - 3.65rem);
+  min-height: 3.65rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column;
+  border-radius: 5px;
+  padding: 0.25rem 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.Post .post-comment-popup-comment-content__name {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Post .post-comment-popup-comment-content__name .material-icons {
+  font-size: 1.25rem;
+}
+.Post .post-comment-popup-comment-content__text {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  padding: 0.15rem 0.6rem;
+}
+.Post .post-comment-popup-comment-content__text span {
+  cursor: pointer;
+  color: blue;
+  margin: 0 0.5rem;
+}
+.Post .post-comment-popup-comment-content__text span:hover {
+  text-decoration: underline;
+}
+.Post .post-comment-popup-comment button {
+  opacity: 0;
+}
+.Post .post-comment-popup-comment:hover button {
+  opacity: 1;
+}
+
+.icon {
+  border-radius: 500px;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.icon:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*# sourceMappingURL=post.css.map */
